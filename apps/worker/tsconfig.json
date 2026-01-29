@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "lib": ["ES2022"],
+    "moduleResolution": "Bundler",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.ts"]
+}
+
+

@@ -1,0 +1,39 @@
+{
+  "name": "@crmolifant/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsup src/index.ts --format esm --target node20 --sourcemap --minify --out-dir dist",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "lint": "echo \"(api) lint ainda não configurado\""
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.1.0",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/rate-limit": "^10.3.0",
+    "@fastify/swagger": "^9.6.1",
+    "@fastify/swagger-ui": "^5.2.4",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.67.3",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.209.0",
+    "@opentelemetry/sdk-node": "^0.209.0",
+    "@sentry/node": "^10.32.1",
+    "@supabase/supabase-js": "^2.56.0",
+    "@crmolifant/shared": "*",
+    "dotenv": "^17.2.3",
+    "fastify": "^5.5.0",
+    "pino": "^9.9.0",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "supertest": "^7.2.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^4.0.18"
+  }
+}

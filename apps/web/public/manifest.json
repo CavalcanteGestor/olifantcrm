@@ -1,0 +1,23 @@
+{
+  "name": "Clínica Olifant - CRM",
+  "short_name": "Olifant CRM",
+  "description": "Sistema de gestão de atendimentos via WhatsApp da Clínica Olifant",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#d97757",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

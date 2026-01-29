@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo: Templates do WhatsApp Business - Clínica Olifant</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 20px; }
+            .page-break { page-break-before: always; }
+            .no-print { display: none; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #25D366;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #25D366;
+            padding-bottom: 15px;
+        }
+        
+        h2 {
+            color: #128C7E;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #128C7E;
+        }
+        
+        h3 {
+            color: #075E54;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #128C7E;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .intro {
+            background: #E8F5E9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #25D366;
+        }
+        
+        .warning {
+            background: #FFF3E0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #FF9800;
+        }
+        
+        .info {
+            background: #E3F2FD;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #2196F3;
+        }
+        
+        .success {
+            background: #E8F5E9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #4CAF50;
+        }
+        
+        .error-box {
+            background: #FFEBEE;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #F44336;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        .example {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            line-height: 1.8;
+        }
+        
+        .example-template {
+            background: #fff;
+            border: 2px solid #25D366;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .example-template h4 {
+            color: #25D366;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .template-meta {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+        
+        .template-content {
+            background: #fafafa;
+            padding: 15px;
+            border-left: 3px solid #25D366;
+            margin: 15px 0;
+            white-space: pre-wrap;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        
+        .template-vars {
+            background: #E3F2FD;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        
+        .step {
+            background: #fff;
+            border: 2px solid #25D366;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #25D366;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .btn-print {
+            background: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .btn-print:hover {
+            background: #128C7E;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            color: #128C7E;
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            color: #075E54;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        .bad-example {
+            background: #FFEBEE;
+            border-left: 4px solid #F44336;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .good-example {
+            background: #E8F5E9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn-print no-print" onclick="window.print()">🖨️ Imprimir / Salvar como PDF</button>
+        
+        <h1>📱 Guia Completo: Templates do WhatsApp Business</h1>
+        <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;"><strong>Clínica Olifant - Pediatria Interdisciplinar</strong></p>
+        
+        <div class="intro">
+            <p><strong>Olá, Secretária!</strong></p>
+            <p>Este guia completo vai te ensinar <strong>tudo</strong> sobre Templates do WhatsApp Business. Você vai aprender desde o básico até técnicas avançadas para criar templates profissionais e eficientes.</p>
+            <p><strong>O que você vai aprender:</strong></p>
+            <ul>
+                <li>O que são templates e por que são essenciais</li>
+                <li>Quando usar templates vs mensagens normais</li>
+                <li>Passo a passo detalhado para criar templates</li>
+                <li>Tipos de templates e quando usar cada um</li>
+                <li><strong>15+ exemplos práticos</strong> prontos para usar</li>
+                <li>Como usar variáveis para personalizar mensagens</li>
+                <li>Como usar templates no sistema CRM</li>
+                <li>Erros comuns e como evitar</li>
+                <li>Troubleshooting e soluções</li>
+            </ul>
+        </div>
+        
+        <div class="toc">
+            <h3>📑 Índice</h3>
+            <ul>
+                <li><a href="#sec1">1. O que são Templates do WhatsApp?</a></li>
+                <li><a href="#sec2">2. Por que usar Templates?</a></li>
+                <li><a href="#sec3">3. Tipos de Templates</a></li>
+                <li><a href="#sec4">4. Regra das 24 Horas (MUITO IMPORTANTE!)</a></li>
+                <li><a href="#sec5">5. Como Criar Templates no Meta Business Suite</a></li>
+                <li><a href="#sec6">6. Variáveis: Personalizando suas Mensagens</a></li>
+                <li><a href="#sec7">7. Exemplos Práticos de Templates</a></li>
+                <li><a href="#sec8">8. Regras e Boas Práticas</a></li>
+                <li><a href="#sec9">9. Como Usar Templates no Sistema CRM</a></li>
+                <li><a href="#sec10">10. Erros Comuns e Soluções</a></li>
+                <li><a href="#sec11">11. Checklist Completo</a></li>
+                <li><a href="#sec12">12. Dúvidas Frequentes</a></li>
+            </ul>
+        </div>
+        
+        <h2 id="sec1">1️⃣ O que são Templates do WhatsApp?</h2>
+        
+        <p>Os <strong>Templates</strong> são mensagens pré-aprovadas pelo WhatsApp que você pode usar para iniciar conversas ou responder clientes <strong>depois de 24 horas</strong> sem resposta.</p>
+        
+        <div class="info">
+            <p><strong>💡 Analogia Simples:</strong></p>
+            <p>Pense nos templates como <strong>"modelos de mensagem"</strong> que você pode reutilizar várias vezes, mas com informações diferentes cada vez (nome do paciente, data, hora, etc.).</p>
+            <p>É como ter um <strong>formulário pré-preenchido</strong> onde você só precisa trocar alguns dados específicos.</p>
+        </div>
+        
+        <h3>Características dos Templates:</h3>
+        <ul>
+            <li>✅ <strong>Pré-aprovados:</strong> Passam por revisão do WhatsApp antes de usar</li>
+            <li>✅ <strong>Reutilizáveis:</strong> Podem ser usados quantas vezes quiser</li>
+            <li>✅ <strong>Personalizáveis:</strong> Permitem usar variáveis ({{1}}, {{2}}, etc.)</li>
+            <li>✅ <strong>Profissionais:</strong> Seguem padrões de qualidade do WhatsApp</li>
+            <li>✅ <strong>Conformes:</strong> Respeitam políticas e regulamentações</li>
+        </ul>
+        
+        <h2 id="sec2">2️⃣ Por que usar Templates?</h2>
+        
+        <h3>Vantagens Principais:</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Vantagem</th>
+                    <th>Benefício</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Funcionam sempre</strong></td>
+                    <td>Mesmo depois de 24h sem contato, você pode enviar</td>
+                </tr>
+                <tr>
+                    <td><strong>Profissionais</strong></td>
+                    <td>Mensagens padronizadas e aprovadas pelo WhatsApp</td>
+                </tr>
+                <tr>
+                    <td><strong>Eficientes</strong></td>
+                    <td>Economizam tempo - não precisa escrever do zero</td>
+                </tr>
+                <tr>
+                    <td><strong>Personalizáveis</strong></td>
+                    <td>Você pode usar variáveis para adaptar cada mensagem</td>
+                </tr>
+                <tr>
+                    <td><strong>Conformidade</strong></td>
+                    <td>Seguem políticas do WhatsApp automaticamente</td>
+                </tr>
+                <tr>
+                    <td><strong>Rastreáveis</strong></td>
+                    <td>Fácil de medir eficácia e melhorar</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2 id="sec3">3️⃣ Tipos de Templates</h2>
+        
+        <p>O WhatsApp Business oferece <strong>3 categorias principais</strong> de templates:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Quando Usar</th>
+                    <th>Exemplo de Uso</th>
+                    <th>Custo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>UTILITY<br>(Utilitário)</strong></td>
+                    <td>Informações importantes, confirmações, atualizações, lembretes</td>
+                    <td>Confirmação de consulta, lembrete de exame, informações de preparo</td>
+                    <td>✅ <strong>GRÁTIS</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>AUTHENTICATION<br>(Autenticação)</strong></td>
+                    <td>Códigos de verificação, senhas temporárias, códigos de acesso</td>
+                    <td>Código de verificação de login, código de acesso ao portal</td>
+                    <td>✅ <strong>GRÁTIS</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>MARKETING<br>(Marketing)</strong></td>
+                    <td>Promoções, novidades, campanhas, ofertas especiais</td>
+                    <td>Promoção de consulta, novidades da clínica, campanhas de vacinação</td>
+                    <td>💰 <strong>PAGO</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="info">
+            <strong>💡 Para Clínicas Médicas:</strong>
+            <p>O tipo mais usado é <strong>UTILITY</strong> porque:</p>
+            <ul>
+                <li>✅ É <strong>gratuito</strong></li>
+                <li>✅ Cobre 90% das necessidades (confirmações, lembretes, informações)</li>
+                <li>✅ Tem aprovação mais rápida</li>
+                <li>✅ Não tem restrições de frequência</li>
+            </ul>
+        </div>
+        
+        <h2 id="sec4">4️⃣ Regra das 24 Horas (MUITO IMPORTANTE!)</h2>
+        
+        <div class="warning">
+            <h3>⚠️ A Regra Mais Importante do WhatsApp Business</h3>
+            <p>O WhatsApp tem uma regra <strong>fundamental</strong> sobre quando você pode enviar mensagens:</p>
+            
+            <h4>📅 Dentro de 24 Horas:</h4>
+            <ul>
+                <li>✅ Você pode enviar <strong>mensagens normais</strong> (texto livre)</li>
+                <li>✅ Pode responder normalmente</li>
+                <li>✅ Não precisa usar templates</li>
+                <li>✅ Pode iniciar conversas normalmente</li>
+            </ul>
+            
+            <h4>⏰ Depois de 24 Horas:</h4>
+            <ul>
+                <li>❌ Você <strong>NÃO pode</strong> enviar mensagens normais</li>
+                <li>✅ Você <strong>SÓ pode</strong> usar templates aprovados</li>
+                <li>⚠️ Mensagens normais serão <strong>bloqueadas</strong></li>
+            </ul>
+            
+            <p><strong>⏱️ Como calcular as 24 horas:</strong></p>
+            <p>As 24 horas começam a contar desde a <strong>última mensagem recebida</strong> do paciente. Se ele enviou uma mensagem às 10h da manhã, você tem até 10h do dia seguinte para responder normalmente.</p>
+        </div>
+        
+        <div class="example">
+<strong>Exemplo Prático:</strong>
+
+📅 Segunda-feira, 10h00 - Paciente envia: "Olá, quero agendar uma consulta"
+✅ Você pode responder normalmente até Terça-feira, 10h00
+
+⏰ Terça-feira, 10h01 - Passou 24h sem resposta
+❌ Você NÃO pode mais enviar mensagem normal
+✅ Você DEVE usar um template aprovado
+
+📅 Terça-feira, 11h00 - Você usa template: "confirmacao_consulta"
+✅ Template enviado com sucesso!
+✅ A partir de agora, você tem mais 24h para responder normalmente
+        </div>
+        
+        <h2 id="sec5">5️⃣ Como Criar Templates no Meta Business Suite</h2>
+        
+        <p>Vamos criar um template passo a passo, com <strong>todos os detalhes</strong>:</p>
+        
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Acesse o Meta Business Suite</strong>
+            <ul>
+                <li>Abra seu navegador e vá para: <code>https://business.facebook.com</code></li>
+                <li>Faça login com a conta da clínica</li>
+                <li>Se você tiver múltiplas contas, selecione <strong>"Clínica Olifant"</strong></li>
+                <li>Certifique-se de estar na conta comercial correta</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Navegue até a Área de Templates</strong>
+            <ul>
+                <li>No menu lateral esquerdo, procure por <strong>"Gestor do WhatsApp"</strong></li>
+                <li>Clique em <strong>"Gestor do WhatsApp"</strong></li>
+                <li>No submenu, clique em <strong>"Modelos de mensagem"</strong> ou <strong>"Message Templates"</strong></li>
+                <li>Você verá uma lista de templates existentes (se houver)</li>
+                <li>Clique no botão <strong>"Criar modelo"</strong> ou <strong>"Novo modelo"</strong> (geralmente azul, no canto superior direito)</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Preencha as Informações Básicas</strong>
+            
+            <h4>Nome do Template:</h4>
+            <ul>
+                <li>Use um nome <strong>claro e descritivo</strong></li>
+                <li>Use apenas <strong>letras minúsculas</strong>, números e underscore (_)</li>
+                <li><strong>Não use:</strong> espaços, acentos, caracteres especiais</li>
+                <li><strong>Exemplos bons:</strong>
+                    <ul>
+                        <li><code>confirmacao_consulta</code></li>
+                        <li><code>lembrete_exame</code></li>
+                        <li><code>informacoes_preparo</code></li>
+                        <li><code>confirmacao_recebimento</code></li>
+                    </ul>
+                </li>
+                <li><strong>Exemplos ruins:</strong>
+                    <ul>
+                        <li><code>Confirmação Consulta</code> (tem acento e maiúscula)</li>
+                        <li><code>lembrete-exame</code> (tem hífen)</li>
+                        <li><code>template 1</code> (tem espaço)</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <h4>Categoria:</h4>
+            <ul>
+                <li>Escolha <strong>UTILITY</strong> (mais comum para clínicas)</li>
+                <li>Ou <strong>MARKETING</strong> se for promoção/campanha</li>
+                <li>Ou <strong>AUTHENTICATION</strong> se for código de verificação</li>
+            </ul>
+            
+            <h4>Idioma:</h4>
+            <ul>
+                <li>Selecione <strong>Português (Brasil)</strong> ou <code>pt_BR</code></li>
+                <li>Isso garante que o template seja aprovado para uso no Brasil</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">4</span>
+            <strong>Escreva o Conteúdo da Mensagem</strong>
+            
+            <p>Esta é a parte mais importante! Vamos criar uma mensagem profissional:</p>
+            
+            <h4>Dicas para escrever bem:</h4>
+            <ul>
+                <li>✅ Seja <strong>claro e objetivo</strong></li>
+                <li>✅ Use linguagem <strong>profissional mas amigável</strong></li>
+                <li>✅ Inclua <strong>informações essenciais</strong></li>
+                <li>✅ Use <strong>parágrafos</strong> para organizar</li>
+                <li>✅ Use variáveis <code>{{1}}</code>, <code>{{2}}</code> para partes que mudam</li>
+            </ul>
+            
+            <div class="example-template">
+                <h4>Exemplo de Template Bem Escrito:</h4>
+                <div class="template-content">Olá {{1}},
+
+Sua consulta está confirmada para {{2}} às {{3}}.
+
+Por favor, chegue com 15 minutos de antecedência.
+
+Em caso de dúvidas ou necessidade de remarcação, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+                <div class="template-vars">
+                    <strong>Variáveis usadas:</strong>
+                    <ul>
+                        <li><code>{{1}}</code> = Nome do paciente</li>
+                        <li><code>{{2}}</code> = Data da consulta</li>
+                        <li><code>{{3}}</code> = Horário da consulta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">5</span>
+            <strong>Configure as Variáveis</strong>
+            
+            <p>Para cada variável <code>{{1}}</code>, <code>{{2}}</code>, etc., você precisa definir o <strong>tipo</strong>:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Quando Usar</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>TEXTO</strong></td>
+                        <td>Nomes, mensagens livres, informações gerais</td>
+                        <td>"Maria Silva", "Consulta de rotina"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DATA</strong></td>
+                        <td>Datas (formato: DD/MM/AAAA)</td>
+                        <td>"15/03/2026"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HORA</strong></td>
+                        <td>Horários (formato: HH:MM)</td>
+                        <td>"14:30"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NÚMERO</strong></td>
+                        <td>Valores numéricos</td>
+                        <td>"150", "3"</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info">
+                <strong>💡 Dica Importante:</strong>
+                <p>As variáveis devem ser preenchidas <strong>na ordem</strong> que aparecem no texto. Se você tem <code>{{1}}</code> e <code>{{2}}</code>, o sistema vai pedir primeiro o valor de <code>{{1}}</code>, depois o de <code>{{2}}</code>.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">6</span>
+            <strong>Revise e Envie para Aprovação</strong>
+            
+            <h4>Antes de enviar, verifique:</h4>
+            <ul>
+                <li>☐ Ortografia e gramática estão corretas</li>
+                <li>☐ Todas as variáveis estão configuradas</li>
+                <li>☐ O nome do template está correto (sem espaços, acentos)</li>
+                <li>☐ A categoria está correta</li>
+                <li>☐ O idioma está correto (pt_BR)</li>
+                <li>☐ A mensagem segue as políticas do WhatsApp</li>
+            </ul>
+            
+            <p>Depois de revisar, clique em <strong>"Enviar"</strong> ou <strong>"Submeter"</strong>.</p>
+            
+            <div class="warning">
+                <strong>⏳ Tempo de Aprovação:</strong>
+                <ul>
+                    <li>⏱️ <strong>Rápido:</strong> 1-2 horas (templates simples UTILITY)</li>
+                    <li>⏱️ <strong>Normal:</strong> 24-48 horas (maioria dos casos)</li>
+                    <li>⏱️ <strong>Demorado:</strong> Até 72 horas (templates complexos ou MARKETING)</li>
+                </ul>
+                <p><strong>⚠️ IMPORTANTE:</strong> Crie os templates com <strong>antecedência</strong>! Não espere precisar para criar.</p>
+            </div>
+        </div>
+        
+        <h2 id="sec6">6️⃣ Variáveis: Personalizando suas Mensagens</h2>
+        
+        <p>Variáveis são <strong>espaços reservados</strong> que você preenche quando envia o template. Elas permitem personalizar cada mensagem sem criar um template diferente para cada paciente.</p>
+        
+        <h3>Como Funcionam as Variáveis:</h3>
+        
+        <div class="example-template">
+            <h4>Exemplo: Template com Variáveis</h4>
+            <div class="template-content">Olá {{1}},
+
+Sua consulta está confirmada para {{2}} às {{3}}.
+
+Por favor, traga os seguintes documentos:
+- RG ou Certidão de Nascimento
+- Cartão do SUS (se tiver)
+- Exames anteriores (se houver)
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Quando você enviar, o sistema vai pedir:</strong>
+                <ol>
+                    <li><strong>{{1}}</strong> → Nome do paciente (ex: "Maria Silva")</li>
+                    <li><strong>{{2}}</strong> → Data (ex: "15/03/2026")</li>
+                    <li><strong>{{3}}</strong> → Horário (ex: "14:30")</li>
+                </ol>
+                <p><strong>Resultado final enviado:</strong></p>
+                <div class="template-content">Olá Maria Silva,
+
+Sua consulta está confirmada para 15/03/2026 às 14:30.
+
+Por favor, traga os seguintes documentos:
+- RG ou Certidão de Nascimento
+- Cartão do SUS (se tiver)
+- Exames anteriores (se houver)
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            </div>
+        </div>
+        
+        <h3>Regras das Variáveis:</h3>
+        <ul>
+            <li>✅ Use <code>{{1}}</code>, <code>{{2}}</code>, <code>{{3}}</code>, etc. (números sequenciais)</li>
+            <li>✅ Máximo de <strong>10 variáveis</strong> por template</li>
+            <li>✅ Cada variável pode ter até <strong>32768 caracteres</strong></li>
+            <li>✅ Variáveis devem estar <strong>na ordem</strong> ({{1}} antes de {{2}})</li>
+            <li>❌ Não pule números (não use {{1}} e {{3}} sem {{2}})</li>
+        </ul>
+        
+        <h2 id="sec7">7️⃣ Exemplos Práticos de Templates</h2>
+        
+        <p>Aqui estão <strong>15+ exemplos completos</strong> de templates prontos para usar na clínica:</p>
+        
+        <div class="example-template">
+            <h4>📅 Template 1: Confirmação de Consulta</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> confirmacao_consulta<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Sua consulta está confirmada para {{2}} às {{3}}.
+
+Por favor, chegue com 15 minutos de antecedência.
+
+Em caso de dúvidas ou necessidade de remarcação, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Data da consulta (DATA) - formato: DD/MM/AAAA</li>
+                    <li><code>{{3}}</code> = Horário da consulta (HORA) - formato: HH:MM</li>
+                </ul>
+                <strong>Exemplo de uso:</strong>
+                <ul>
+                    <li>{{1}} = "Maria Silva"</li>
+                    <li>{{2}} = "15/03/2026"</li>
+                    <li>{{3}} = "14:30"</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>🔔 Template 2: Lembrete de Consulta (24h antes)</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> lembrete_consulta_24h<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Este é um lembrete: você tem uma consulta agendada para amanhã ({{2}}) às {{3}}.
+
+Por favor, confirme sua presença respondendo esta mensagem.
+
+Em caso de necessidade de remarcação, entre em contato conosco o quanto antes.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Data da consulta (DATA)</li>
+                    <li><code>{{3}}</code> = Horário da consulta (HORA)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>🔔 Template 3: Lembrete de Consulta (mesmo dia)</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> lembrete_consulta_hoje<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Lembrete: você tem uma consulta hoje ({{2}}) às {{3}}.
+
+Por favor, chegue com 15 minutos de antecedência.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Data da consulta (DATA)</li>
+                    <li><code>{{3}}</code> = Horário da consulta (HORA)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>📋 Template 4: Informações de Preparo para Exame</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> preparo_exame<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 4
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Sua consulta/exame está agendado para {{2}} às {{3}}.
+
+<strong>Preparo necessário:</strong>
+{{4}}
+
+Em caso de dúvidas sobre o preparo, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Data (DATA)</li>
+                    <li><code>{{3}}</code> = Horário (HORA)</li>
+                    <li><code>{{4}}</code> = Instruções de preparo (TEXTO)</li>
+                </ul>
+                <strong>Exemplo de {{4}}:</strong>
+                <p>"Jejum de 8 horas. Trazer exames anteriores se houver."</p>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>✅ Template 5: Confirmação de Recebimento</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> confirmacao_recebimento<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 2
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Recebemos sua mensagem e entraremos em contato em breve.
+
+Se for urgente, ligue para {{2}}.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Telefone de emergência (TEXTO)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>📝 Template 6: Solicitação de Documentos</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> solicitacao_documentos<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 2
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Para sua consulta de {{2}}, por favor traga os seguintes documentos:
+
+- RG ou Certidão de Nascimento
+- Cartão do SUS (se tiver)
+- Exames anteriores relacionados
+- Cartão de vacinação (se aplicável)
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Tipo de consulta (TEXTO) - ex: "pediatria", "nutrição"</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>🔄 Template 7: Confirmação de Remarcação</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> confirmacao_remarcacao<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 4
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Sua consulta foi remarcada com sucesso!
+
+<strong>Nova data:</strong> {{2}} às {{3}}
+
+<strong>Motivo:</strong> {{4}}
+
+Em caso de dúvidas, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Nova data (DATA)</li>
+                    <li><code>{{3}}</code> = Novo horário (HORA)</li>
+                    <li><code>{{4}}</code> = Motivo da remarcação (TEXTO)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>📞 Template 8: Retorno de Ligação</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> retorno_ligacao<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 2
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Tentamos entrar em contato, mas não conseguimos falar.
+
+Por favor, retorne nossa ligação no número {{2}} ou responda esta mensagem.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Telefone da clínica (TEXTO)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>💊 Template 9: Lembrete de Medicação</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> lembrete_medicacao<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Lembrete: é hora de administrar a medicação {{2}}.
+
+<strong>Dosagem:</strong> {{3}}
+
+Em caso de dúvidas, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Nome da medicação (TEXTO)</li>
+                    <li><code>{{3}}</code> = Dosagem (TEXTO) - ex: "1 comprimido", "5ml"</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>📋 Template 10: Resultado de Exame Disponível</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> resultado_exame_disponivel<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+O resultado do exame {{2}} realizado em {{3}} já está disponível.
+
+Por favor, entre em contato conosco para agendar o retorno e discutir os resultados.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Tipo de exame (TEXTO)</li>
+                    <li><code>{{3}}</code> = Data do exame (DATA)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>🏥 Template 11: Informações de Chegada</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> informacoes_chegada<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Bem-vindo à Clínica Olifant!
+
+<strong>Endereço:</strong> {{2}}
+
+<strong>Estacionamento:</strong> {{3}}
+
+Em caso de dúvidas, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Endereço completo (TEXTO)</li>
+                    <li><code>{{3}}</code> = Informações de estacionamento (TEXTO)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>⏰ Template 12: Atraso no Atendimento</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> aviso_atraso<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 2
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Informamos que há um atraso de aproximadamente {{2}} minutos no atendimento.
+
+Pedimos desculpas pelo inconveniente e agradecemos sua compreensão.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Tempo de atraso (NÚMERO) - ex: "15", "30"</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>🎉 Template 13: Aniversário do Paciente</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> feliz_aniversario<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 1
+            </div>
+            <div class="template-content">Olá {{1}},
+
+A equipe da Clínica Olifant deseja um feliz aniversário!
+
+Que este novo ano de vida seja repleto de saúde e alegria.
+
+Estamos à disposição para cuidar da saúde do seu pequeno.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>📅 Template 14: Lembrete de Vacinação</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> lembrete_vacinacao<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Lembrete: está na hora de atualizar a vacinação!
+
+<strong>Vacina recomendada:</strong> {{2}}
+
+<strong>Próxima dose:</strong> {{3}}
+
+Entre em contato conosco para agendar.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Nome da vacina (TEXTO)</li>
+                    <li><code>{{3}}</code> = Data recomendada (DATA)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="example-template">
+            <h4>✅ Template 15: Confirmação de Cancelamento</h4>
+            <div class="template-meta">
+                <strong>Nome:</strong> confirmacao_cancelamento<br>
+                <strong>Categoria:</strong> UTILITY<br>
+                <strong>Idioma:</strong> pt_BR<br>
+                <strong>Variáveis:</strong> 3
+            </div>
+            <div class="template-content">Olá {{1}},
+
+Sua consulta de {{2}} às {{3}} foi cancelada conforme solicitado.
+
+Se desejar reagendar, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <div class="template-vars">
+                <strong>Variáveis:</strong>
+                <ul>
+                    <li><code>{{1}}</code> = Nome do paciente (TEXTO)</li>
+                    <li><code>{{2}}</code> = Data da consulta cancelada (DATA)</li>
+                    <li><code>{{3}}</code> = Horário da consulta cancelada (HORA)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2 id="sec8">8️⃣ Regras e Boas Práticas</h2>
+        
+        <h3>✅ O que FAZER:</h3>
+        
+        <div class="success">
+            <ul>
+                <li>✅ Use linguagem <strong>clara e profissional</strong></li>
+                <li>✅ Seja <strong>objetivo e direto</strong></li>
+                <li>✅ Inclua <strong>informações essenciais</strong></li>
+                <li>✅ Use <strong>variáveis</strong> para personalizar</li>
+                <li>✅ Revise <strong>ortografia e gramática</strong> antes de enviar</li>
+                <li>✅ Use <strong>parágrafos</strong> para organizar o texto</li>
+                <li>✅ Inclua <strong>informações de contato</strong> quando relevante</li>
+                <li>✅ Seja <strong>cortês e respeitoso</strong></li>
+                <li>✅ Use <strong>nomes descritivos</strong> para os templates</li>
+                <li>✅ Crie templates <strong>com antecedência</strong></li>
+            </ul>
+        </div>
+        
+        <h3>❌ O que NÃO fazer:</h3>
+        
+        <div class="error-box">
+            <ul>
+                <li>❌ Não use <strong>emojis excessivos</strong> (máximo 1-2 por mensagem)</li>
+                <li>❌ Não faça <strong>spam</strong> ou mensagens promocionais sem categoria MARKETING</li>
+                <li>❌ Não use linguagem <strong>muito informal</strong></li>
+                <li>❌ Não mencione <strong>preços</strong> sem contexto adequado</li>
+                <li>❌ Não use <strong>caracteres especiais</strong> desnecessários</li>
+                <li>❌ Não use <strong>MAIÚSCULAS</strong> excessivamente (parece que está gritando)</li>
+                <li>❌ Não faça <strong>promessas médicas</strong> ou diagnósticos</li>
+                <li>❌ Não use <strong>linguagem técnica</strong> demais</li>
+                <li>❌ Não crie templates <strong>muito longos</strong> (máximo 1024 caracteres)</li>
+                <li>❌ Não use <strong>links externos</strong> sem aprovação</li>
+            </ul>
+        </div>
+        
+        <h3>Comparação: Bom vs Ruim</h3>
+        
+        <div class="bad-example">
+            <h4>❌ Exemplo RUIM:</h4>
+            <div class="example">Olá!!! 🎉🎉🎉
+
+SUA CONSULTA ESTÁ CONFIRMADA PARA 15/03/2026 ÀS 14:30!!!
+
+NÃO ESQUEÇA DE CHEGAR NO HORÁRIO!!!
+
+QUALQUER DÚVIDA LIGUE!!!
+
+OBRIGADO!!!</div>
+            <p><strong>Problemas:</strong></p>
+            <ul>
+                <li>Muitos emojis</li>
+                <li>Tudo em maiúsculas</li>
+                <li>Muitos pontos de exclamação</li>
+                <li>Não usa variáveis (não é personalizável)</li>
+                <li>Linguagem muito informal</li>
+            </ul>
+        </div>
+        
+        <div class="good-example">
+            <h4>✅ Exemplo BOM:</h4>
+            <div class="example">Olá {{1}},
+
+Sua consulta está confirmada para {{2}} às {{3}}.
+
+Por favor, chegue com 15 minutos de antecedência.
+
+Em caso de dúvidas ou necessidade de remarcação, entre em contato conosco.
+
+Atenciosamente,
+Equipe Clínica Olifant</div>
+            <p><strong>Por que é melhor:</strong></p>
+            <ul>
+                <li>Linguagem profissional mas amigável</li>
+                <li>Usa variáveis para personalizar</li>
+                <li>Bem estruturado com parágrafos</li>
+                <li>Inclui informações importantes</li>
+                <li>Fácil de ler e entender</li>
+            </ul>
+        </div>
+        
+        <h2 id="sec9">9️⃣ Como Usar Templates no Sistema CRM</h2>
+        
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>Sincronizar Templates do WhatsApp</strong>
+            <ul>
+                <li>No sistema CRM, faça login</li>
+                <li>Vá em <strong>Configurações</strong> (ícone de engrenagem)</li>
+                <li>Clique em <strong>"Templates"</strong> ou <strong>"Templates WhatsApp"</strong></li>
+                <li>Você verá uma lista de templates (se já tiver sincronizado antes)</li>
+                <li>Clique no botão <strong>"Sincronizar Templates"</strong></li>
+                <li>Aguarde alguns segundos enquanto o sistema busca os templates aprovados</li>
+                <li>Você verá uma mensagem de sucesso quando terminar</li>
+            </ul>
+            <div class="info">
+                <strong>💡 Dica:</strong> Sincronize os templates sempre que criar novos ou quando quiser atualizar a lista.
+            </div>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>Enviar Template em uma Conversa</strong>
+            <ul>
+                <li>Abra a conversa com o paciente no HUD (tela principal)</li>
+                <li>Se passou mais de 24h sem resposta, você verá um <strong>aviso amarelo</strong> informando que precisa usar template</li>
+                <li>Na área de digitação, procure pelo botão de <strong>"Template"</strong> ou <strong>"Enviar Template"</strong> (geralmente um ícone de documento ou formulário)</li>
+                <li>Clique no botão - uma lista de templates disponíveis vai aparecer</li>
+                <li>Escolha o template desejado (ex: "confirmacao_consulta")</li>
+                <li>O sistema vai mostrar um formulário com os campos para preencher as variáveis</li>
+                <li>Preencha cada campo:
+                    <ul>
+                        <li>Nome do paciente</li>
+                        <li>Data da consulta</li>
+                        <li>Horário</li>
+                        <li>Etc. (dependendo do template)</li>
+                    </ul>
+                </li>
+                <li>Revise as informações preenchidas</li>
+                <li>Clique em <strong>"Enviar"</strong></li>
+                <li>A mensagem será enviada e aparecerá na conversa</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>Verificar Status do Envio</strong>
+            <ul>
+                <li>Após enviar, a mensagem aparecerá na conversa</li>
+                <li>Você verá indicadores de status:
+                    <ul>
+                        <li>✅ <strong>Enviado:</strong> Mensagem foi enviada com sucesso</li>
+                        <li>📤 <strong>Entregue:</strong> Mensagem chegou no WhatsApp do paciente</li>
+                        <li>👁️ <strong>Lido:</strong> Paciente leu a mensagem</li>
+                    </ul>
+                </li>
+                <li>Se houver erro, você verá uma mensagem de erro e pode tentar novamente</li>
+            </ul>
+        </div>
+        
+        <div class="info">
+            <strong>💡 Dica Importante:</strong>
+            <p>O sistema vai mostrar automaticamente quando você precisa usar template (após 24h sem resposta). Mas você também pode usar templates a qualquer momento, mesmo dentro das 24h!</p>
+        </div>
+        
+        <h2 id="sec10">🔟 Erros Comuns e Soluções</h2>
+        
+        <h3>❌ Erro 1: "Template não encontrado"</h3>
+        <div class="error-box">
+            <p><strong>Causa:</strong> O template não foi sincronizado ou não existe.</p>
+            <p><strong>Solução:</strong></p>
+            <ol>
+                <li>Vá em Configurações → Templates</li>
+                <li>Clique em "Sincronizar Templates"</li>
+                <li>Aguarde a sincronização</li>
+                <li>Tente enviar novamente</li>
+            </ol>
+        </div>
+        
+        <h3>❌ Erro 2: "Template não aprovado"</h3>
+        <div class="error-box">
+            <p><strong>Causa:</strong> O template ainda está pendente de aprovação no WhatsApp.</p>
+            <p><strong>Solução:</strong></p>
+            <ol>
+                <li>Verifique no Meta Business Suite o status do template</li>
+                <li>Aguarde a aprovação (pode levar até 72h)</li>
+                <li>Depois de aprovado, sincronize novamente no sistema</li>
+            </ol>
+        </div>
+        
+        <h3>❌ Erro 3: "Variáveis não preenchidas"</h3>
+        <div class="error-box">
+            <p><strong>Causa:</strong> Você não preencheu todas as variáveis obrigatórias.</p>
+            <p><strong>Solução:</strong></p>
+            <ol>
+                <li>Verifique quantas variáveis o template precisa</li>
+                <li>Preencha todos os campos do formulário</li>
+                <li>Certifique-se de que nenhum campo está vazio</li>
+            </ol>
+        </div>
+        
+        <h3>❌ Erro 4: "Não é possível enviar mensagem normal após 24h"</h3>
+        <div class="error-box">
+            <p><strong>Causa:</strong> Você tentou enviar mensagem normal depois de 24h sem resposta.</p>
+            <p><strong>Solução:</strong></p>
+            <ol>
+                <li>Use um template aprovado</li>
+                <li>O sistema vai mostrar automaticamente a opção de template</li>
+                <li>Escolha o template adequado e preencha as variáveis</li>
+            </ol>
+        </div>
+        
+        <h3>❌ Erro 5: "Nome do template inválido"</h3>
+        <div class="error-box">
+            <p><strong>Causa:</strong> O nome do template tem caracteres inválidos.</p>
+            <p><strong>Solução:</strong></p>
+            <ol>
+                <li>Use apenas letras minúsculas, números e underscore (_)</li>
+                <li>Não use espaços, acentos ou caracteres especiais</li>
+                <li>Exemplo correto: <code>confirmacao_consulta</code></li>
+                <li>Exemplo errado: <code>Confirmação Consulta</code></li>
+            </ol>
+        </div>
+        
+        <h2 id="sec11">1️⃣1️⃣ Checklist Completo</h2>
+        
+        <div class="step">
+            <h3>Antes de Criar o Template:</h3>
+            <ul>
+                <li>☐ Defini qual é o objetivo da mensagem</li>
+                <li>☐ Escolhi a categoria correta (UTILITY, MARKETING, etc.)</li>
+                <li>☐ Pensei em quantas variáveis vou precisar</li>
+                <li>☐ Escrevi um rascunho da mensagem</li>
+            </ul>
+            
+            <h3>Ao Criar o Template:</h3>
+            <ul>
+                <li>☐ Escolhi um nome claro e descritivo (sem espaços, acentos)</li>
+                <li>☐ Selecionei a categoria correta</li>
+                <li>☐ Escolhi o idioma correto (pt_BR)</li>
+                <li>☐ Escrevi a mensagem de forma clara e profissional</li>
+                <li>☐ Usei variáveis ({{1}}, {{2}}) onde necessário</li>
+                <li>☐ Configurei o tipo de cada variável corretamente</li>
+                <li>☐ Revisei a ortografia e gramática</li>
+                <li>☐ Verifiquei se segue as políticas do WhatsApp</li>
+                <li>☐ Revisei se não tem emojis excessivos</li>
+                <li>☐ Verifiquei se não está tudo em maiúsculas</li>
+            </ul>
+            
+            <h3>Após Enviar para Aprovação:</h3>
+            <ul>
+                <li>☐ Anotei o nome do template</li>
+                <li>☐ Anotei quando enviei para aprovação</li>
+                <li>☐ Vou verificar o status periodicamente</li>
+                <li>☐ Quando aprovado, vou sincronizar no sistema CRM</li>
+            </ul>
+            
+            <h3>Ao Usar o Template:</h3>
+            <ul>
+                <li>☐ Sincronizei os templates no sistema CRM</li>
+                <li>☐ Escolhi o template correto para a situação</li>
+                <li>☐ Preenchi todas as variáveis corretamente</li>
+                <li>☐ Revisei as informações antes de enviar</li>
+                <li>☐ Verifiquei se a mensagem foi enviada com sucesso</li>
+            </ul>
+        </div>
+        
+        <h2 id="sec12">1️⃣2️⃣ Dúvidas Frequentes</h2>
+        
+        <h3>❓ Posso editar um template depois de aprovado?</h3>
+        <p><strong>Não.</strong> Templates aprovados não podem ser editados. Se precisar fazer alterações, você precisa criar um novo template com um nome diferente.</p>
+        
+        <h3>❓ Quantos templates posso ter?</h3>
+        <p>Você pode ter <strong>até 250 templates</strong> por número do WhatsApp Business. Isso é mais que suficiente para uma clínica!</p>
+        
+        <h3>❓ Quanto tempo leva para aprovar?</h3>
+        <p>Geralmente <strong>24-48 horas</strong>, mas pode levar até 72 horas. Templates simples de UTILITY costumam ser aprovados mais rápido.</p>
+        
+        <h3>❓ Posso usar templates para responder dentro de 24h?</h3>
+        <p><strong>Sim!</strong> Você pode usar templates a qualquer momento, mesmo dentro das 24h. Eles são <strong>obrigatórios</strong> apenas após 24h sem resposta.</p>
+        
+        <h3>❓ E se meu template for rejeitado?</h3>
+        <p>O WhatsApp vai informar o motivo da rejeição. Corrija os problemas indicados e envie novamente. Geralmente os motivos são:</p>
+        <ul>
+            <li>Linguagem muito promocional (use categoria MARKETING)</li>
+            <li>Muitos emojis</li>
+            <li>Informações médicas incorretas</li>
+            <li>Links não permitidos</li>
+        </ul>
+        
+        <h3>❓ Posso usar o mesmo template para vários pacientes?</h3>
+        <p><strong>Sim!</strong> Esse é o objetivo dos templates! Você pode usar o mesmo template quantas vezes quiser, apenas preenchendo as variáveis diferentes para cada paciente.</p>
+        
+        <h3>❓ Preciso criar um template diferente para cada tipo de consulta?</h3>
+        <p><strong>Não necessariamente.</strong> Você pode criar templates genéricos e usar variáveis para especificar o tipo. Por exemplo:</p>
+        <div class="example">Template: confirmacao_consulta
+
+Variável {{4}} = Tipo de consulta
+- "Consulta de pediatria"
+- "Consulta de nutrição"
+- "Consulta de psicologia"</div>
+        
+        <h3>❓ Posso deletar um template?</h3>
+        <p><strong>Sim,</strong> mas só se ele não estiver sendo usado. No Meta Business Suite, você pode deletar templates que não são mais necessários.</p>
+        
+        <h3>❓ Templates têm limite de caracteres?</h3>
+        <p><strong>Sim.</strong> O limite é de <strong>1024 caracteres</strong> por template. Isso é suficiente para a maioria das mensagens.</p>
+        
+        <h3>❓ Posso usar imagens ou documentos nos templates?</h3>
+        <p><strong>Sim!</strong> Você pode adicionar mídia (imagens, documentos, vídeos) aos templates. No Meta Business Suite, há uma opção para adicionar mídia ao criar o template.</p>
+        
+        <h3>❓ Como sei se um template foi aprovado?</h3>
+        <p>No Meta Business Suite, vá em "Modelos de mensagem" e verifique o status. Você verá:</p>
+        <ul>
+            <li>🟡 <strong>Pendente:</strong> Aguardando aprovação</li>
+            <li>🟢 <strong>Aprovado:</strong> Pronto para usar</li>
+            <li>🔴 <strong>Rejeitado:</strong> Precisa corrigir</li>
+        </ul>
+        
+        <h3>❓ Posso criar templates em outros idiomas?</h3>
+        <p><strong>Sim!</strong> Você pode criar templates em diferentes idiomas. Cada idioma precisa ser um template separado. Para clínicas no Brasil, o mais comum é português (pt_BR).</p>
+        
+        <h2>📚 Resumo Final</h2>
+        
+        <div class="success">
+            <p><strong>Lembre-se sempre:</strong></p>
+            <ol>
+                <li>Templates são <strong>obrigatórios</strong> após 24h sem resposta</li>
+                <li>Crie templates <strong>com antecedência</strong> (leva tempo para aprovar)</li>
+                <li>Use categoria <strong>UTILITY</strong> para mensagens informativas (é grátis!)</li>
+                <li>Use variáveis para <strong>personalizar</strong> as mensagens</li>
+                <li><strong>Sincronize</strong> os templates no sistema CRM após aprovação</li>
+                <li>Revise sempre antes de enviar para aprovação</li>
+                <li>Use linguagem profissional mas amigável</li>
+                <li>Não use emojis excessivos ou maiúsculas</li>
+            </ol>
+        </div>
+        
+        <div class="info">
+            <h3>📞 Precisa de Ajuda?</h3>
+            <p>Se tiver dúvidas sobre templates ou encontrar problemas:</p>
+            <ul>
+                <li>Consulte este guia novamente</li>
+                <li>Entre em contato com o suporte técnico</li>
+                <li>Verifique a documentação do Meta Business Suite</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Clínica Olifant - Pediatria Interdisciplinar</strong></p>
+            <p>Guia Completo de Templates WhatsApp Business</p>
+            <p>Criado em Janeiro de 2026</p>
+            <p>Versão 2.0 - Guia Expandido</p>
+            <p style="margin-top: 20px;">Para dúvidas, entre em contato com o suporte técnico.</p>
+        </div>
+    </div>
+</body>
+</html>

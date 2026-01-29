@@ -1,0 +1,45 @@
+{
+  "name": "crmolifant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "npm run dev -w apps/api",
+    "dev:worker": "npm run dev -w apps/worker",
+    "dev:desktop": "npm run dev -w apps/desktop",
+    "dev": "concurrently -n web,api,worker -c cyan,green,magenta \"npm run dev:web\" \"npm run dev:api\" \"npm run dev:worker\"",
+    "build": "npm run build -w apps/api && npm run build -w apps/web && npm run build -w apps/worker",
+    "build:desktop": "npm run build -w apps/desktop",
+    "build:desktop:win": "npm run build:win -w apps/desktop",
+    "build:desktop:mac": "npm run build:mac -w apps/desktop",
+    "build:desktop:all": "npm run build:all -w apps/desktop",
+    "lint": "npm run -ws lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.91.1",
+    "@swc/helpers": "^0.5.18",
+    "@tanstack/react-virtual": "^3.13.18",
+    "csv-parser": "^3.2.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
+    "recharts": "^3.7.0",
+    "styled-jsx": "^5.1.7"
+  },
+  "devDependencies": {
+    "browserslist": "^4.28.1",
+    "caniuse-lite": "^1.0.30001763",
+    "concurrently": "^9.2.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
