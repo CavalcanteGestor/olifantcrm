@@ -146,7 +146,7 @@ Verifique se a aplicação está rodando:
 ```bash
 pm2 status
 curl http://localhost:3000
-curl http://localhost:3001/health
+curl http://localhost:3006/health
 ```
 
 ### Erro: "502 Bad Gateway"
@@ -206,7 +206,7 @@ Internet (HTTPS)
 Nginx (porta 443)
     ↓
     ├─→ / (Frontend)  → localhost:3000 (Next.js)
-    └─→ /api (Backend) → localhost:3001 (Fastify)
+    └─→ /api (Backend) → localhost:3006 (Fastify)
 ```
 
 ---
