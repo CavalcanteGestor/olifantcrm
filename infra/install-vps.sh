@@ -55,36 +55,36 @@ echo "  Passo 1: Instalando Dependências"
 echo "=========================================="
 echo ""
 
-# Instalar dependências root
+# Instalar dependências root (COM devDependencies para build)
 echo "Instalando dependências root..."
-npm install --production
+npm install
 print_success "Dependências root instaladas"
 
-# Instalar shared
+# Instalar shared (COM devDependencies para build)
 echo "Instalando packages/shared..."
 cd packages/shared
-npm install --production
+npm install
 cd ../..
 print_success "Shared instalado"
 
-# Instalar API
+# Instalar API (COM devDependencies para build)
 echo "Instalando apps/api..."
 cd apps/api
-npm install --production
+npm install
 cd ../..
 print_success "API instalada"
 
-# Instalar Worker
+# Instalar Worker (COM devDependencies para build)
 echo "Instalando apps/worker..."
 cd apps/worker
-npm install --production
+npm install
 cd ../..
 print_success "Worker instalado"
 
-# Instalar Web
+# Instalar Web (COM devDependencies para build)
 echo "Instalando apps/web..."
 cd apps/web
-npm install --production
+npm install
 cd ../..
 print_success "Web instalado"
 
